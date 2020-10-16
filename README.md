@@ -8,7 +8,7 @@ author: "@giridhar7632"
 
 This workshop is an introduction to [React Hooks](https://reactjs.org/docs/hooks-intro.html). We're building a colorful app - 'random-color scheme generator' using react. It will look something like this.
 
-![Final Result](https://cloud-hjs8whqjv.vercel.app/0screencapture.png)
+![Final Result](https://cloud-16p9skn27.vercel.app/0colorscheme.png)
 
 Here's the [Live demo](https://color-scheme-generator.giridharhackclu.repl.co/) and [Source Code](https://repl.it/@Giridharhackclu/Color-scheme-generator#src/index.js)
 
@@ -39,4 +39,6 @@ There are many benifits of using Functional components. They are :
 * More reusable.
 
 Let's start creating our app.
-After setting up the above [repl](https://repl.it/@Giridharhackclu/color-scheme-generator-starter#README.md), click run button to start the live-server (it’ll take a moment to get running the first time). After running successfully, you can see `Hello world!`.
+After setting up the above [repl](https://repl.it/@Giridharhackclu/color-scheme-generator-starter#README.md), click run button to start the live-server (it’ll take a moment to get running the first time). After running successfully, kick down the console, you can see `Hello world!` on the webpage.
+
+Then navigate to `src` folder and create two components 
