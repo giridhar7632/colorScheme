@@ -31,4 +31,4 @@ Lets start React
 
 ## React Hooks API
 
-[Hooks](https://reactjs.org/docs/hooks-intro.html) are introduced in React 16.8 version. Previously, we cannot use state in [functional (stateless)](https://www.freecodecamp.org/news/functional-components-vs-class-components-in-react/) components of React. Hooks enables us to use state and other React features without writing a [class (stateful)](https://www.freecodecamp.org/news/functional-components-vs-class-components-in-react/) component. 
+[Hooks](https://reactjs.org/docs/hooks-intro.html) are introduced in React 16.8 version. Previously, [class (stateful)](https://www.freecodecamp.org/news/functional-components-vs-class-components-in-react/) components were the only way to define a component that had its own state, and lifecycle methods. We cannot use state in [functional (stateless)](https://www.freecodecamp.org/news/functional-components-vs-class-components-in-react/) components of React. Hooks enables us to use state and other React features without writing a [class (stateful)](https://www.freecodecamp.org/news/functional-components-vs-class-components-in-react/) component. 
