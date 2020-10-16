@@ -25,9 +25,9 @@ Before staring this workshop, you should have some knowledge about [React.js](ht
 
 ## Setup
 
-For setting up the project fork this repl [here](https://repl.it/@Giridharhackclu/color-scheme-generator-starter#README.md). The starter repl contains ['create-react-app'](https://github.com/facebook/create-react-app) installed. There are some basic styles applied, you will get cleared along the workshop.
+For setting up the project fork the repl [here](https://repl.it/@Giridharhackclu/color-scheme-generator-starter#README.md). The starter repl contains ['create-react-app'](https://github.com/facebook/create-react-app) installed. There are some basic styles applied, you will get cleared along the workshop.
 
-Lets start React
+Let's start React
 
 ## React Hooks API
 
@@ -37,3 +37,6 @@ There are many benifits of using Functional components. They are :
 * Easier to read, test and debug.
 * Have better performance.
 * More reusable.
+
+Let's start creating our app.
+After setting up the above [repl](https://repl.it/@Giridharhackclu/color-scheme-generator-starter#README.md), click run button to start the live-server (it’ll take a moment to get running the first time). After running successfully, you can see `Hello world!`.
