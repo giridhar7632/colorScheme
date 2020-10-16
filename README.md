@@ -19,10 +19,15 @@ Before staring this workshop, you should have some knowledge about [React.js](ht
 - React Fundamentals
   - [JSX](https://reactjs.org/docs/introducing-jsx.html)
   - [Components and Props](https://reactjs.org/docs/components-and-props.html)
-  - [State](https://reactjs.org/docs/state-and-lifecycle.html)
+  - [State and LifeCycle](https://reactjs.org/docs/state-and-lifecycle.html)
   
  If you are familar with these, Lets get going.
 
 ## Setup
 
 For setting up the project fork this repl [here](https://repl.it/@Giridharhackclu/color-scheme-generator-starter#README.md). The starter repl contains ['create-react-app'](https://github.com/facebook/create-react-app) installed. There are some basic styles applied, you will get cleared along the workshop.
+
+Lets start React
+
+## React Hooks API
+
