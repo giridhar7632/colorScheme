@@ -1,0 +1,26 @@
+{
+  "name": "colorScheme",
+  "version": "1.0.0",
+  "description": "--- name: 'Color Scheme Generator' description: 'Create color schemes while learning React Hooks' author: '@giridhar7632' ---",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Giridhar-hackclub/colorScheme.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Giridhar-hackclub/colorScheme/issues"
+  },
+  "homepage": "https://github.com/Giridhar-hackclub/colorScheme#readme",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  }
+}
