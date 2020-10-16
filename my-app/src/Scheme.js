@@ -1,14 +1,40 @@
 import React, { useState, useEffect } from 'react'
 import Color from './Color'
-import randomColor from 'randomcolor'
 
 export default function Scheme() {
   const [count, setCount] = useState(0)
   const [colors, setColors] = useState([])
-  
+  const codes = [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+  ];
+
   const change = () => {
       setCount(prevCount => prevCount + 1)
     }
+
+  const randomColor = () => {
+    let hexcode = "#";
+    for (let i = 0; i < 6; i++) {
+      hexcode += codes[Math.floor(Math.random() * codes.length)];
+    }
+    return hexcode;
+  }
+
   const getColor = () => {
     const baseColor = randomColor().slice(1);
     console.log(baseColor)
