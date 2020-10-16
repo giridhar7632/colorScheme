@@ -31,4 +31,9 @@ Lets start React
 
 ## React Hooks API
 
-[Hooks](https://reactjs.org/docs/hooks-intro.html) are introduced in React 16.8 version. Previously, [class (stateful)](https://www.freecodecamp.org/news/functional-components-vs-class-components-in-react/) components were the only way to define a component that had its own state, and lifecycle methods. We cannot use state in [functional (stateless)](https://www.freecodecamp.org/news/functional-components-vs-class-components-in-react/) components of React. Hooks enables us to use state and other React features without writing a [class (stateful)](https://www.freecodecamp.org/news/functional-components-vs-class-components-in-react/) component. 
+[Hooks](https://reactjs.org/docs/hooks-intro.html) are introduced in React 16.8 version. Previously, [class](https://www.freecodecamp.org/news/functional-components-vs-class-components-in-react/) components were the only way to define a component that had its own state, and lifecycle methods. [Functional](https://www.freecodecamp.org/news/functional-components-vs-class-components-in-react/) components of React, which are light and more flexible, are limited in functionality. Hooks enables us to use state and other React features, like lifecycle methods and event handlers,  without writing a [class](https://www.freecodecamp.org/news/functional-components-vs-class-components-in-react/) component. 
+
+There are many benifits of using Functional components. They are :
+* Easier to read, test and debug.
+* Have better performance.
+* More reusable.
