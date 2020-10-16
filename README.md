@@ -31,7 +31,7 @@ Let's start React
 
 ## React Hooks API
 
-[Hooks](https://reactjs.org/docs/hooks-intro.html) are introduced in React 16.8 version. Previously, [class](https://www.freecodecamp.org/news/functional-components-vs-class-components-in-react/) components were the only way to define a component that had its own state, and lifecycle methods. [Functional](https://www.freecodecamp.org/news/functional-components-vs-class-components-in-react/) components of React, which are light and more flexible, are limited in functionality. Hooks enables us to use state and other React features, like lifecycle methods and event handlers,  without writing a [class](https://www.freecodecamp.org/news/functional-components-vs-class-components-in-react/) component. 
+[Hooks](https://reactjs.org/docs/hooks-intro.html) are introduced in React 16.8 version. Previously, [Class components](https://www.freecodecamp.org/news/functional-components-vs-class-components-in-react/) were the only way to define a component that had its own state, and lifecycle methods. [Functional components](https://www.freecodecamp.org/news/functional-components-vs-class-components-in-react/) of React, which are light and more flexible, are limited in functionality. Hooks enables us to use state and other React features, like lifecycle methods and event handlers,  without writing a Class component. 
 
 There are many benifits of using Functional components. They are :
 * Easier to read, test and debug.
@@ -41,4 +41,4 @@ There are many benifits of using Functional components. They are :
 Let's start creating our app.
 After setting up the above [repl](https://repl.it/@Giridharhackclu/color-scheme-generator-starter#README.md), click run button to start the live-server (it’ll take a moment to get running the first time). After running successfully, kick down the console, you can see `Hello world!` on the webpage.
 
-Then navigate to `src` folder and create two components 
+Then navigate to `src` folder and create two components `Color.js` and `Scheme.js`. 
