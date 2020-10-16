@@ -20,8 +20,9 @@ Before staring this workshop, you should have some knowledge about [React.js](ht
   - [JSX](https://reactjs.org/docs/introducing-jsx.html)
   - [Components and Props](https://reactjs.org/docs/components-and-props.html)
   - [State](https://reactjs.org/docs/state-and-lifecycle.html)
-    If you are familar with these, Lets get going.
+  
+ If you are familar with these, Lets get going.
 
 ## Setup
 
-Lets focus completely on React in this project. For setting up the project fork this repl
+For setting up the project fork this repl [here](https://repl.it/@Giridharhackclu/color-scheme-generator-starter#README.md). The starter repl contains ['create-react-app'](https://github.com/facebook/create-react-app) installed.
