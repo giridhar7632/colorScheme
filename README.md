@@ -25,4 +25,4 @@ Before staring this workshop, you should have some knowledge about [React.js](ht
 
 ## Setup
 
-For setting up the project fork this repl [here](https://repl.it/@Giridharhackclu/color-scheme-generator-starter#README.md). The starter repl contains ['create-react-app'](https://github.com/facebook/create-react-app) installed.
+For setting up the project fork this repl [here](https://repl.it/@Giridharhackclu/color-scheme-generator-starter#README.md). The starter repl contains ['create-react-app'](https://github.com/facebook/create-react-app) installed. There are some basic styles applied, you will get cleared along the workshop.
