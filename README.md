@@ -6,7 +6,7 @@ author: "@giridhar7632"
 
 # Color Scheme Generator
 
-This workshop is an introduction to [React Hooks](https://reactjs.org/docs/hooks-intro.html). We're building a random-color scheme generator app using react. It will look something like this.
+This workshop is an introduction to [React Hooks](https://reactjs.org/docs/hooks-intro.html). We're building a colorful app - 'random-color scheme generator' using react. It will look something like this.
 
 ![Final Result](https://cloud-hjs8whqjv.vercel.app/0screencapture.png)
 
@@ -31,3 +31,4 @@ Lets start React
 
 ## React Hooks API
 
+[Hooks](https://reactjs.org/docs/hooks-intro.html) are introduced in React 16.8 version. Previously, we cannot use state in [functional(stateless)](https://functional-components.giridharhackclu.repl.co/) components of React. Hooks enables us to use state and other React features without writing a class component. 
