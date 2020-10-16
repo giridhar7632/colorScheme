@@ -15,10 +15,13 @@ Here's the [Live demo](https://color-scheme-generator.giridharhackclu.repl.co/) 
 
 ## Prerequisites
 
-Before staring this workshop, you should have some knowledge about [React.js](https://reactjs.org) and some modern JavaScript.
-* JavaScript
-  - Es6
+Before staring this workshop, you should have some knowledge about [React.js](https://reactjs.org) and some ES6 features of JavaScript.
 * React Fundamentals
   - [JSX](https://reactjs.org/docs/introducing-jsx.html)
   - [Components and Props](https://reactjs.org/docs/components-and-props.html)
   - [State](https://reactjs.org/docs/state-and-lifecycle.html)
+If you are familar with these, Lets get going.
+
+## Setup
+
+Lets focus completely on React in this project. For setting up the project fork this repl
