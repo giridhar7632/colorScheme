@@ -98,10 +98,6 @@ We use state to update the colors array everytime you click the button.
 Using the `useState()` API, you can create a new state variable, and have a way to alter it. `useState()` accepts the initial value of the state item and returns an array containing the state variable, and the function you call to alter the state. Since it returns an array we use [array destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to access each individual item. You can add as many `useState()` calls you want, to create as many state variables as you want. Just make sure you call it in the [top level](https://reactjs.org/docs/hooks-rules.html#only-call-hooks-from-react-functions) of a component (not in an `if` or in any other block). Create two variables `count` and `colors` array using `useState`. 
 
 ```javascript
-import React, { useState, useEffect } from 'react'
-import Color from './Color'
-import randomColor from 'randomcolor'
-
 export default function App() {
   const [count, setCount] = useState(0)
   const [colors, setColors] = useState([])
@@ -113,7 +109,7 @@ export default function App() {
 }
 ```
 
-Let's create a function `change()` which changes `count` when the button ws clicked. Add event `onClick` to the button and call the function.
+Let's create a function `change()` which changes `count` when the button is clicked.We use the function `setState()` for changing the count. Add event `onClick` to the button and call the function.
 
 ```javascript
 export default function App() {
@@ -122,7 +118,6 @@ export default function App() {
 
   const change = () => {
       setCount(prevCount => prevCount + 1)
-      console.log(count)
     }
 
   return (
@@ -131,4 +126,20 @@ export default function App() {
     </div>
   )
 }
+```
+
+## useEffect() Hook
+
+The `useEffect()` API accepts a function as argument. The function runs when the component is first rendered, and on every subsequent rerender/update. React first updates the DOM, then calls any function passed to `useEffect()`. All without blocking the UI rendering even on blocking code, unlike the old `componentDidMount` and `componentDidUpdate`, which makes our apps feel faster. It is very effective adding external API class, or event-listeners inside this hook. Since the `useEffect()` functions are run on every subsequent re-render/update, we can tell React to skip a run, for performance purposes, by adding a second parameter which is an array that contains a list of state variables to watch for. React will only re-run the side effect if one of the items in this array changes. If the second parameter is not defined, the `useEffect()` runs infinitely.
+
+Now we can set the colors of our project using `useEffect()`. We get a base color from `randomColor()` and make a color scheme using an [API](https://www.thecolorapi.com/form-scheme). The following `getColors()` function creates elements in the `colors` array.
+```javascript
+const getColor = () => {
+    const baseColor = randomColor().slice(1);
+    fetch(`https://www.thecolorapi.com/scheme?hex=${baseColor}&mode=quad&count=5`)
+    .then(res => res.json())
+    .then(res => {
+      setColors(res.colors.map(color => color.hex.value))
+    })
+  }
 ```
