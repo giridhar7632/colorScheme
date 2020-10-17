@@ -92,11 +92,11 @@ We create a array of colors and change the colors when you click the button. Cre
 <button className="btn" onClick={change}>Change!</button>
 ```
 
-We use state to update the colors array everytime you click the button.
+We use state to update the colors array everytime you click the button. 
 
 ## useState() Hook
 
-Using the `useState()` API, you can create a new state variable, and have a way to alter it. `useState()` accepts the initial value of the state item and returns an array containing the state variable, and the function you call to alter the state. Since it returns an array we use [array destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to access each individual item. You can add as many `useState()` calls you want, to create as many state variables as you want. Just make sure you call it in the [top level](https://reactjs.org/docs/hooks-rules.html#only-call-hooks-from-react-functions) of a component (not in an `if` or in any other block). Create two variables `count` and `colors` array using `useState`. 
+Using the `useState()` API, you can create a new state variable, and have a way to alter it. `useState()` accepts the initial value of the state item and returns an array containing the state variable, and the function you call to alter the state. Since it returns an array we use [array destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to access each individual item. You can add as many `useState()` calls you want, to create as many state variables as you want. Just make sure you call it in the [top level]https://reactjs.org/docs/hooks-rules.html#only-call-hooks-at-the-top-level) of a component (not in an `if` or in any other block). Create two variables `count` and `colors` array using `useState`. 
 
 ```javascript
 export default function App() {
@@ -193,4 +193,11 @@ export default function App() {
 }
 ```
 
-That's it!! Now you can see random color-schemes on the webpage. You can change the color, by clicking the button.
+That's it!! Now you can see random color-schemes on the webpage. You can change the colors, by clicking the button. The `useState()` and `useEffect` are the most used hooks in react. Check the final project [here](https://color-scheme-generator.giridharhackclu.repl.co/).
+
+There are other additional hooks and are rarely used. You can check them here.
+- [`useRef`](https://reactjs.org/docs/hooks-reference.html#useref)
+- [`useCallback`](https://reactjs.org/docs/hooks-reference.html#usecallback)
+- [`useMemo`](https://reactjs.org/docs/hooks-reference.html#usememo)
+You can also create [custom hooks](https://reactjs.org/docs/hooks-custom.html)
+
