@@ -23,12 +23,6 @@ Before staring this workshop, you should have some knowledge about [React.js](ht
 
 If you are familar with these, Lets get going.
 
-## Setup
-
-For setting up the project fork the repl [here](https://repl.it/@Giridharhackclu/color-scheme-generator-starter#README.md). The starter repl contains ['create-react-app'](https://github.com/facebook/create-react-app) installed. There are some basic styles applied, you will get cleared along the workshop.
-
-Let's start React
-
 ## React Hooks API
 
 [Hooks](https://reactjs.org/docs/hooks-intro.html) are introduced in React 16.8 version. Previously, [Class components](https://www.freecodecamp.org/news/functional-components-vs-class-components-in-react/) were the only way to define a component that had its own state, and lifecycle methods. [Functional components](https://www.freecodecamp.org/news/functional-components-vs-class-components-in-react/) of React, which are light and more flexible, are limited in functionality. Hooks enables us to use state and other React features, like lifecycle methods and event handlers, without writing a Class component.
@@ -39,7 +33,11 @@ There are many benifits of using Functional components. They are :
 - Have better performance.
 - More reusable.
 
-Let's start creating our app.
+## Setup
+
+For setting up the project fork the repl [here](https://repl.it/@Giridharhackclu/color-scheme-generator-starter#README.md). The starter repl contains ['create-react-app'](https://github.com/facebook/create-react-app) installed. There are some basic styles applied, you will get cleared along the workshop.
+
+Let's start creating our React app.
 After setting up the above [repl](https://repl.it/@Giridharhackclu/color-scheme-generator-starter#README.md), click run button to start the live-server (it’ll take a moment to get running the first time). After running successfully, kick down the console, you can see `Hello world!` on the webpage.
 
-Then navigate to `src` folder and create two components `Color.js` and `Scheme.js`.
+Then navigate to `src` folder and create two components `Color.js` and `Scheme.js`. The 
