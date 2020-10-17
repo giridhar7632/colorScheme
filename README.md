@@ -14,7 +14,7 @@ Here's the [Live demo](https://color-scheme-generator.giridharhackclu.repl.co/) 
 
 ## Prerequisites
 
-Before staring this workshop, you should have some knowledge about [React.js](https://reactjs.org) and some ES6 features of JavaScript.
+Before staring this workshop, you should have some knowledge about [React.js](https://reactjs.org) and some [ES6](https://www.w3schools.com/Js/js_es6.asp) features of JavaScript.
 
 - React Fundamentals
   - [JSX](https://reactjs.org/docs/introducing-jsx.html)
@@ -25,7 +25,7 @@ If you are familar with these, Lets get going.
 
 ## React Hooks API
 
-[Hooks](https://reactjs.org/docs/hooks-intro.html) are introduced in React 16.8 version. Previously, [Class components](https://www.freecodecamp.org/news/functional-components-vs-class-components-in-react/) were the only way to define a component that had its own state, and lifecycle methods. [Functional components](https://www.freecodecamp.org/news/functional-components-vs-class-components-in-react/) of React, which are light and more flexible, are limited in functionality. Hooks enables us to use state and other React features, like lifecycle methods and event handlers, without writing a Class component.
+[Hooks](https://reactjs.org/docs/hooks-intro.html) are introduced in React 16.8 version. Previously, [Class components](https://reactjs.org/docs/components-and-props.html#function-and-class-components) were the only way to define a component that had its own state, and lifecycle methods. [Functional components](https://reactjs.org/docs/components-and-props.html#function-and-class-components) of React, which are light and more flexible, are limited in functionality. Hooks enables us to use state and other React features, like lifecycle methods and event handlers, without writing a Class component.
 
 There are many benifits of using Functional components. They are :
 
@@ -56,7 +56,7 @@ export default function Color() {
 }
 ```
 
-Then let's create elements with colors. But what colors? We'll give them random colors. Create a [prop](https://reactjs.org/docs/components-and-props.html#props-are-read-only) `colors`, an `array`, which we get from our main component. Then we will loop through the array with [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
+Then let's create elements with colors. But what colors? We'll give them random colors. Create a [prop](https://reactjs.org/docs/components-and-props.html#props-are-read-only) `colors`, an `array`, which we get from our main component. Then we will loop through the array with [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map). The final component wil be like this :
 
 ```javascript
 import React from 'react'
@@ -72,6 +72,62 @@ export default function Color({ colors = [] }) {
             style={{ background: color }}
           ><span className="name">{color}</span></div>
       ))}
+    </div>
+  )
+}
+```
+
+It gets `colors` array as a prop from other component and returns an array of `div` elements with a `backgroundColor`. Each element contains respective `backgroundColor` in form of `hexcode`. If it gets nothing, it renders `null`. Also a [`key`](https://reactjs.org/docs/lists-and-keys.html#keys) is given to every element for it's identity. We finished writing our `Color.js` component. Don't worry, nothing will be on the webpage without rendering the component. 
+
+Then open `App.js` component, where we do our major work. For getting a random color we are using a package [randomcolor](https://randomcolor.lllllllllllllllll.com/), which is a small library of some random colors, is already installed in the starter template. Let's import our `Color.js` and `randomColor` into our `App.js` component. Add these lines of code to the `App` component.
+
+```javascript
+import Color from './Color'
+import randomColor from 'randomcolor'
+```
+
+We create a array of colors and change the colors when you click the button. Create a button with class `btn` inside the `div`.
+```html
+<button className="btn" onClick={change}>Change!</button>
+```
+
+We use state to update the colors array everytime you click the button.
+
+## useState() Hook
+
+Using the `useState()` API, you can create a new state variable, and have a way to alter it. `useState()` accepts the initial value of the state item and returns an array containing the state variable, and the function you call to alter the state. Since it returns an array we use [array destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to access each individual item. You can add as many `useState()` calls you want, to create as many state variables as you want. Just make sure you call it in the [top level](https://reactjs.org/docs/hooks-rules.html#only-call-hooks-from-react-functions) of a component (not in an `if` or in any other block). Create two variables `count` and `colors` array using `useState`. 
+
+```javascript
+import React, { useState, useEffect } from 'react'
+import Color from './Color'
+import randomColor from 'randomcolor'
+
+export default function App() {
+  const [count, setCount] = useState(0)
+  const [colors, setColors] = useState([])
+
+  return (
+        <button className="btn">Change!</button>
+    </div>
+  )
+}
+```
+
+Let's create a function `change()` which changes `count` when the button ws clicked. Add event `onClick` to the button and call the function.
+
+```javascript
+export default function App() {
+  const [count, setCount] = useState(0)
+  const [colors, setColors] = useState([])
+
+  const change = () => {
+      setCount(prevCount => prevCount + 1)
+      console.log(count)
+    }
+
+  return (
+    <div>
+        <button className="btn" onClick={change}>Change!</button>
     </div>
   )
 }
