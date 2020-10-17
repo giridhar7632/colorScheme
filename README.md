@@ -1,6 +1,6 @@
 ---
 name: "Color Scheme Generator"
-description: "Create color schemes while learning React Hooks"
+description: "Create color schemes using React Hooks"
 author: "@giridhar7632"
 ---
 
@@ -87,6 +87,7 @@ import randomColor from 'randomcolor'
 ```
 
 We create a array of colors and change the colors when you click the button. Create a button with class `btn` inside the `div`.
+
 ```html
 <button className="btn" onClick={change}>Change!</button>
 ```
@@ -132,14 +133,89 @@ export default function App() {
 
 The `useEffect()` API accepts a function as argument. The function runs when the component is first rendered, and on every subsequent rerender/update. React first updates the DOM, then calls any function passed to `useEffect()`. All without blocking the UI rendering even on blocking code, unlike the old `componentDidMount` and `componentDidUpdate`, which makes our apps feel faster. It is very effective adding external API class, or event-listeners inside this hook. Since the `useEffect()` functions are run on every subsequent re-render/update, we can tell React to skip a run, for performance purposes, by adding a second parameter which is an array that contains a list of state variables to watch for. React will only re-run the side effect if one of the items in this array changes. If the second parameter is not defined, the `useEffect()` runs infinitely.
 
-Now we can set the colors of our project using `useEffect()`. We get a base color from `randomColor()` and make a color scheme using an [API](https://www.thecolorapi.com/form-scheme). The following `getColors()` function creates elements in the `colors` array.
+Now we can set the colors of our project using `useEffect()`. We get a base color from `randomColor()` and make a color scheme using an [API](https://www.thecolorapi.com/form-scheme). The following `getColors()` function creates elements in the `colors` array. We can get different color schemes using our `baseColor`from the [API](https://www.thecolorapi.com/form-scheme).
+
 ```javascript
 const getColor = () => {
     const baseColor = randomColor().slice(1);
     fetch(`https://www.thecolorapi.com/scheme?hex=${baseColor}&mode=quad&count=5`)
-    .then(res => res.json())
-    .then(res => {
-      setColors(res.colors.map(color => color.hex.value))
+    .then(data => data.json())
+    .then(data => {
+      setColors(data.colors.map(color => color.hex.value))
     })
   }
+```
+
+Then we will call this function inside our `useEffect()` hook. As described, we use `count` as a second parameter for recalling the hook. 
+
+```javascript
+import React, { useState, useEffect } from 'react'
+import Color from './Color'
+import randomColor from 'randomcolor'
+
+export default function App() {
+  const [count, setCount] = useState(0)
+  const [colors, setColors] = useState([])
+
+  const change = () => {
+      setCount(prevCount => prevCount + 1)
+    }
+
+  const getColor = () => {
+    const baseColor = randomColor().slice(1);
+    fetch(`https://www.thecolorapi.com/scheme?hex=${baseColor}&mode=quad&count=5`)
+    .then(data => data.json())
+    .then(data => {
+      setColors(data.colors.map(color => color.hex.value))
+    })
+  }
+
+  useEffect(getColor, [count])
+  
+  return (
+    <div>
+        <button className="btn" onClick={change}>Change!</button>
+    </div>
+  )
+}
+```
+
+Every time you click the button, `count` changes. As the `count` changes, the `useEffect()` runs and `getColor()` is executed, the `colors` array changes. 
+
+Until now, you cannot see any colors on the screen. Let's now render the `Color.js` component inside for `App.js` component and pass the `colors` array as props.
+
+```janascript
+import React, { useState, useEffect } from 'react'
+import Color from './Color'
+import randomColor from 'randomcolor'
+
+export default function App() {
+  const [count, setCount] = useState(0)
+  const [colors, setColors] = useState([])
+
+  const change = () => {
+      setCount(prevCount => prevCount + 1)
+      console.log(count)
+    }
+
+  const getColor = () => {
+    const baseColor = randomColor().slice(1);
+    fetch(`https://www.thecolorapi.com/scheme?hex=${baseColor}&mode=quad&count=5`)
+    .then(data => data.json())
+    .then(data => {
+      setColors(data.colors.map(color => color.hex.value))
+    })
+  }
+
+  useEffect(getColor, [count])
+  console.log(colors)
+  return (
+    <div>
+        <Color
+          colors={colors}
+        />
+        <button className="btn" onClick={change}>Change!</button>
+    </div>
+  )
+}
 ```
