@@ -56,3 +56,23 @@ export default function Color() {
 }
 ```
 
+Then let's create elements with colors. But what colors? We'll give them random colors. Create a [prop](https://reactjs.org/docs/components-and-props.html#props-are-read-only) `colors`, an `array`, which we get from our main component. Then we will loop through the array with [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
+
+```javascript
+import React from 'react'
+
+export default function Color({ colors = [] }) {
+  if (!colors.length) return null
+  return (
+    <div className="container">
+      {colors.map((color, i) => (
+          <div
+            key={i}
+            className="color"
+            style={{ background: color }}
+          ><span className="name">{color}</span></div>
+      ))}
+    </div>
+  )
+}
+```
