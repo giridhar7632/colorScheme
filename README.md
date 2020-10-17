@@ -154,6 +154,8 @@ Then we will call this function inside our `useEffect()` hook. As described, we 
 
 Every time you click the button, `count` changes. As the `count` changes, the `useEffect()` runs and `getColor()` is executed, the `colors` array changes. 
 
+![Visualisation](https://cloud-endlseu6b.vercel.app/0resized.png)
+
 Until now, you cannot see any colors on the screen. Let's now render the `Color.js` component inside for `App.js` component and pass the `colors` array as props.
 
 ```javascript
@@ -190,3 +192,5 @@ export default function App() {
   )
 }
 ```
+
+That's it!! Now you can see random color-schemes on the webpage. You can change the color, by clicking the button.
