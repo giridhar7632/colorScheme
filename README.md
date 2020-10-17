@@ -149,42 +149,14 @@ const getColor = () => {
 Then we will call this function inside our `useEffect()` hook. As described, we use `count` as a second parameter for recalling the hook. 
 
 ```javascript
-import React, { useState, useEffect } from 'react'
-import Color from './Color'
-import randomColor from 'randomcolor'
-
-export default function App() {
-  const [count, setCount] = useState(0)
-  const [colors, setColors] = useState([])
-
-  const change = () => {
-      setCount(prevCount => prevCount + 1)
-    }
-
-  const getColor = () => {
-    const baseColor = randomColor().slice(1);
-    fetch(`https://www.thecolorapi.com/scheme?hex=${baseColor}&mode=quad&count=5`)
-    .then(data => data.json())
-    .then(data => {
-      setColors(data.colors.map(color => color.hex.value))
-    })
-  }
-
   useEffect(getColor, [count])
-  
-  return (
-    <div>
-        <button className="btn" onClick={change}>Change!</button>
-    </div>
-  )
-}
 ```
 
 Every time you click the button, `count` changes. As the `count` changes, the `useEffect()` runs and `getColor()` is executed, the `colors` array changes. 
 
 Until now, you cannot see any colors on the screen. Let's now render the `Color.js` component inside for `App.js` component and pass the `colors` array as props.
 
-```janascript
+```javascript
 import React, { useState, useEffect } from 'react'
 import Color from './Color'
 import randomColor from 'randomcolor'
@@ -195,7 +167,6 @@ export default function App() {
 
   const change = () => {
       setCount(prevCount => prevCount + 1)
-      console.log(count)
     }
 
   const getColor = () => {
