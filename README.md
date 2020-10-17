@@ -40,7 +40,7 @@ For setting up the project fork the repl [here](https://repl.it/@Giridharhackclu
 Let's start creating our React app.
 After setting up the above [repl](https://repl.it/@Giridharhackclu/color-scheme-generator-starter#README.md), click run button to start the live-server (it’ll take a moment to get running the first time). After running successfully, kick down the console, you can see `Hello world!` on the webpage.
 
-Then navigate to `src` folder and create a component `Color.js`. The `Color.js` component displays the colors on the page. Add the following code. The element with class `container` has it's styles in `index.css`. Don't forget too include classes to the div elements through out the project.
+Then navigate to `src` folder and create a component `Color.js`. The `Color.js` component displays the colors on the page. Add the following code. The element with class `container` has it's styles in `index.css`. Don't forget too include classes to the elements through out the project.
 
 ```javascript
 import React from 'react'
@@ -53,3 +53,4 @@ export default function Color() {
   )
 }
 ```
+
