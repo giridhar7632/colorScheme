@@ -16,10 +16,10 @@ Here's the [Live demo](https://color-scheme-generator.giridharhackclu.repl.co/) 
 
 Before staring this workshop, you should have some knowledge about [React.js](https://reactjs.org) and some [ES6](https://www.w3schools.com/Js/js_es6.asp) features of JavaScript.
 
-- React Fundamentals
-  - [JSX](https://reactjs.org/docs/introducing-jsx.html)
-  - [Components and Props](https://reactjs.org/docs/components-and-props.html)
-  - [State and LifeCycle](https://reactjs.org/docs/state-and-lifecycle.html)
+React Fundamentals
+ - [JSX](https://reactjs.org/docs/introducing-jsx.html)
+ - [Components and Props](https://reactjs.org/docs/components-and-props.html)
+ - [State and LifeCycle](https://reactjs.org/docs/state-and-lifecycle.html)
 
 If you are familar with these, Lets get going.
 
@@ -206,6 +206,7 @@ export default function App() {
 That's it!! Now you can see random color-schemes on the webpage. You can change the colors, clicking the button. The `useState()` and `useEffect` are the most used hooks in react. Check the final project [here](https://color-scheme-generator.giridharhackclu.repl.co/).
 
 There are other additional hooks and are rarely used. You can check them here.
+
 - [`useContext`](https://reactjs.org/docs/hooks-reference.html#usecontext)
 - [`useRef`](https://reactjs.org/docs/hooks-reference.html#useref)
 - [`useCallback`](https://reactjs.org/docs/hooks-reference.html#usecallback)
@@ -216,4 +217,12 @@ You can also create [custom hooks](https://reactjs.org/docs/hooks-custom.html)
 ## Hacking
 
 - You can customise the styles in `index.css` and make the project mobile responsive.
-- Create 
+- Create different types of schemes. Refer [the color api](https://www.thecolorapi.com/docs#schemes) for more types of schemes.
+- You can add some more functionality to this app, like getting the `baseColor` from the user.
+- You can also create a custom function which generates a random color, without using [randomcolor](https://randomcolor.lllllllllllllllll.com/) package.
+
+Make use of your creativity and share it with me on slack as [@Giridhar](https://hackclub.slack.com/team/U013E6KE9UJ). Feel free to contact if you have any doubts.
+
+## Inspiration
+
+- 
