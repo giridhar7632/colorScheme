@@ -98,7 +98,13 @@ We use state to update the colors array everytime you click the button.
 
 Using the `useState()` API, you can create a new state variable, and have a way to alter it. `useState()` accepts the initial value of the state item and returns an array containing the state variable, and the function you call to alter the state. Since it returns an array we use [array destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to access each individual item. You can add as many `useState()` calls you want, to create as many state variables as you want. Just make sure you call it in the [top level]https://reactjs.org/docs/hooks-rules.html#only-call-hooks-at-the-top-level) of a component (not in an `if` or in any other block). Create two variables `count` and `colors` array using `useState`. 
 
+You have to import `useState()` hook from react library.
+
 ```javascript
+import React, { useState } from 'react'
+import Color from './Color'
+import randomColor from 'randomcolor'
+
 export default function App() {
   const [count, setCount] = useState(0)
   const [colors, setColors] = useState([])
@@ -135,7 +141,11 @@ The `useEffect()` API accepts a function as argument. The function runs when the
 
 Now we can set the colors of our project using `useEffect()`. We get a base color from `randomColor()` and make a color scheme using an [API](https://www.thecolorapi.com/form-scheme). The following `getColors()` function creates elements in the `colors` array. We can get different color schemes using our `baseColor`from the [API](https://www.thecolorapi.com/form-scheme).
 
+Make sure that you import `useEffect` from React.
+
 ```javascript
+import React, { useState, useEffect } from 'react'
+
 const getColor = () => {
     const baseColor = randomColor().slice(1);
     fetch(`https://www.thecolorapi.com/scheme?hex=${baseColor}&mode=quad&count=5`)
@@ -193,11 +203,17 @@ export default function App() {
 }
 ```
 
-That's it!! Now you can see random color-schemes on the webpage. You can change the colors, by clicking the button. The `useState()` and `useEffect` are the most used hooks in react. Check the final project [here](https://color-scheme-generator.giridharhackclu.repl.co/).
+That's it!! Now you can see random color-schemes on the webpage. You can change the colors, clicking the button. The `useState()` and `useEffect` are the most used hooks in react. Check the final project [here](https://color-scheme-generator.giridharhackclu.repl.co/).
 
 There are other additional hooks and are rarely used. You can check them here.
+- [`useContext`](https://reactjs.org/docs/hooks-reference.html#usecontext)
 - [`useRef`](https://reactjs.org/docs/hooks-reference.html#useref)
 - [`useCallback`](https://reactjs.org/docs/hooks-reference.html#usecallback)
 - [`useMemo`](https://reactjs.org/docs/hooks-reference.html#usememo)
+
 You can also create [custom hooks](https://reactjs.org/docs/hooks-custom.html)
 
+## Hacking
+
+- You can customise the styles in `index.css` and make the project mobile responsive.
+- Create 
