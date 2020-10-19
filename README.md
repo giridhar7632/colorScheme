@@ -221,18 +221,15 @@ You can also create [custom hooks](https://reactjs.org/docs/hooks-custom.html)
 - You can add some more functionality to this app, like getting the `baseColor` from the user.
 - You can also create a custom function which generates a random color, without using [randomcolor](https://randomcolor.lllllllllllllllll.com/) package.
 
-Make use of your creativity and share it with me on slack as [@Giridhar](https://hackclub.slack.com/team/U013E6KE9UJ). Feel free to contact if you have any doubts.
+Make use of your creativity, use hooks in your projects and share it with me on slack as [@Giridhar](https://hackclub.slack.com/team/U013E6KE9UJ).
 
 ## Inspiration
 
-- Example-1: [Demo](https://monochrome-schemes.giridharhackclu.repl.co/). [Source code](https://repl.it/@Giridharhackclu/monochrome-schemes#src/App.js).
+- Example-1: [Demo](https://monochrome-schemes.giridharhackclu.repl.co/). [Source code](https://repl.it/@Giridharhackclu/monochrome-schemes#src/App.js).<br>
+Monochrome Color Schemes - It generates monochrome color-schemes. Same as the project in this workshop, but with different type of scheme.
 
-**Monochrome Color Schemes** - It generates monochrome color-schemes. Same as the project in this workshop, but with different type of scheme.
-
-- Example-2: [Demo](https://random-color-scheme.giridharhackclu.repl.co). [Source code](https://repl.it/@Giridharhackclu/desired-color-scheme#src/App.js).
-
+- Example-2: [Demo](https://random-color-scheme.giridharhackclu.repl.co). [Source code](https://repl.it/@Giridharhackclu/desired-color-scheme#src/App.js).<br>
 In this example, the [randomcolor](https://randomcolor.lllllllllllllllll.com/) package is not used. Insted created a custom function to generate random colors.
 
-- Example-3: [Demo](). [Source code]().
-
+- Example-3: [Demo](). [Source code]().<br>
 The functionality of the app was improved. You can copy the color code by clicking on the hexcode. Also you can get desired color scheme.  
