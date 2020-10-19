@@ -203,11 +203,9 @@ export default function App() {
 }
 ```
 
-## Handling Events
-
- 
-
 That's it!! Now you can see random color-schemes on the webpage. You can change the colors, clicking the button. The `useState()` and `useEffect` are the most used hooks in react. Check the final project [here](https://color-scheme-generator.giridharhackclu.repl.co/).
+
+![Final Project](https://cloud-hptr7s5bf.vercel.app/0color-schemer.gif)
 
 There are other additional hooks and are rarely used. You can check them here.
 
