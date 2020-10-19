@@ -203,16 +203,17 @@ export default function App() {
 }
 ```
 
-## Handle Events
+## Handling Events
 
-Before hooks, you either used class components, or you passed an event handler using props. Now we can use the `useCallback()` built-in API.
+ 
 
 That's it!! Now you can see random color-schemes on the webpage. You can change the colors, clicking the button. The `useState()` and `useEffect` are the most used hooks in react. Check the final project [here](https://color-scheme-generator.giridharhackclu.repl.co/).
 
 There are other additional hooks and are rarely used. You can check them here.
 
-- [`useContext`](https://reactjs.org/docs/hooks-reference.html#usecontext)
+- [`useContext`](https://reactjs.org/docs/hooks-reference.html#usecontext) 
 - [`useRef`](https://reactjs.org/docs/hooks-reference.html#useref)
+- [`useCallback`](https://reactjs.org/docs/hooks-reference.html#usecallback)
 - [`useMemo`](https://reactjs.org/docs/hooks-reference.html#usememo)
 
 You can also create [custom hooks](https://reactjs.org/docs/hooks-custom.html)
@@ -224,13 +225,11 @@ You can also create [custom hooks](https://reactjs.org/docs/hooks-custom.html)
 - You can add some more functionality to this app, like getting the `baseColor` from the user.
 - You can also create a custom function which generates a random color, without using [randomcolor](https://randomcolor.lllllllllllllllll.com/) package.
 
-[`useCallback`](https://reactjs.org/docs/hooks-reference.html#usecallback) 
-
 Make use of your creativity, use hooks in your projects and share it with me on slack as [@Giridhar](https://hackclub.slack.com/team/U013E6KE9UJ).
 
 ## Inspiration
 
-- Example-1: [Demo](https://monochrome-schemes.giridharhackclu.repl.co/). [Source code](https://repl.it/@Giridharhackclu/monochrome-schemes#src/App.js).<br>
+- Example-1: [Demo](https://Monochrome-color-schemes.giridharhackclu.repl.co/). [Source code](https://repl.it/@Giridharhackclu/Monochrome-color-schemes#src/App.js).<br>
 Monochrome Color Schemes - It generates monochrome color-schemes. Same as the project in this workshop, but with different type of scheme.
 
 - Example-2: [Demo](https://custom-color-schemer.giridharhackclu.repl.co/). [Source code](https://repl.it/@Giridharhackclu/Custom-color-schemer#src/App.js).<br>
