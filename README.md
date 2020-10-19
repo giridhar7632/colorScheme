@@ -228,8 +228,10 @@ Make use of your creativity, use hooks in your projects and share it with me on 
 - Example-1: [Demo](https://monochrome-schemes.giridharhackclu.repl.co/). [Source code](https://repl.it/@Giridharhackclu/monochrome-schemes#src/App.js).<br>
 Monochrome Color Schemes - It generates monochrome color-schemes. Same as the project in this workshop, but with different type of scheme.
 
-- Example-2: [Demo](https://random-color-scheme.giridharhackclu.repl.co). [Source code](https://repl.it/@Giridharhackclu/desired-color-scheme#src/App.js).<br>
+- Example-2: [Demo](https://custom-color-schemer.giridharhackclu.repl.co/). [Source code](https://repl.it/@Giridharhackclu/Custom-color-schemer#src/App.js).<br>
+Analogic Color Schemes -   It generates Analogic-complement color-schemes. Same as the project in this workshop, but with different type of scheme.
+
+- Example-3: [Demo](https://random-color-scheme.giridharhackclu.repl.co). [Source code](https://repl.it/@Giridharhackclu/desired-color-scheme#src/App.js).<br>
 In this example, the [randomcolor](https://randomcolor.lllllllllllllllll.com/) package is not used. Insted created a custom function to generate random colors.
 
-- Example-3: [Demo](). [Source code]().<br>
-The functionality of the app was improved. You can copy the color code by clicking on the hexcode. Also you can get desired color scheme.  
+Use the power of React Hooks in you next React project. Hope you enjoy this workshop :v:
