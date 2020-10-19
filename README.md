@@ -236,4 +236,4 @@ Analogic Color Schemes -   It generates Analogic-complement color-schemes. Same 
 - Example-3: [Demo](https://random-color-scheme.giridharhackclu.repl.co). [Source code](https://repl.it/@Giridharhackclu/desired-color-scheme#src/App.js).<br>
 In this example, the [randomcolor](https://randomcolor.lllllllllllllllll.com/) package is not used. Instead created a custom function to generate random colors.
 
-Use the power of React Hooks in you next React project. Hope you enjoy this workshop :v:
+Use the power of React Hooks in you next React project. Hope you enjoy this workshop! :v:
