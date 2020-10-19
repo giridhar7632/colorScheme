@@ -94,7 +94,7 @@ We create a array of colors and change the colors when you click the button. Cre
 
 We use state to update the colors array everytime you click the button. 
 
-## useState() Hook
+## The State Hook - `useState()`
 
 Using the `useState()` API, you can create a new state variable, and have a way to alter it. `useState()` accepts the initial value of the state item and returns an array containing the state variable, and the function you call to alter the state. Since it returns an array we use [array destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to access each individual item. You can add as many `useState()` calls you want, to create as many state variables as you want. Just make sure you call it in the [top level]https://reactjs.org/docs/hooks-rules.html#only-call-hooks-at-the-top-level) of a component (not in an `if` or in any other block). Create two variables `count` and `colors` array using `useState`. 
 
@@ -135,7 +135,7 @@ export default function App() {
 }
 ```
 
-## useEffect() Hook
+## The Effect Hook - useEffect()
 
 The `useEffect()` API accepts a function as argument. The function runs when the component is first rendered, and on every subsequent rerender/update. React first updates the DOM, then calls any function passed to `useEffect()`. All without blocking the UI rendering even on blocking code, unlike the old `componentDidMount` and `componentDidUpdate`, which makes our apps feel faster. It is very effective adding external API class, or event-listeners inside this hook. Since the `useEffect()` functions are run on every subsequent re-render/update, we can tell React to skip a run, for performance purposes, by adding a second parameter which is an array that contains a list of state variables to watch for. React will only re-run the side effect if one of the items in this array changes. If the second parameter is not defined, the `useEffect()` runs infinitely.
 
@@ -203,13 +203,16 @@ export default function App() {
 }
 ```
 
+## Handle Events
+
+Before hooks, you either used class components, or you passed an event handler using props. Now we can use the `useCallback()` built-in API.
+
 That's it!! Now you can see random color-schemes on the webpage. You can change the colors, clicking the button. The `useState()` and `useEffect` are the most used hooks in react. Check the final project [here](https://color-scheme-generator.giridharhackclu.repl.co/).
 
 There are other additional hooks and are rarely used. You can check them here.
 
 - [`useContext`](https://reactjs.org/docs/hooks-reference.html#usecontext)
 - [`useRef`](https://reactjs.org/docs/hooks-reference.html#useref)
-- [`useCallback`](https://reactjs.org/docs/hooks-reference.html#usecallback)
 - [`useMemo`](https://reactjs.org/docs/hooks-reference.html#usememo)
 
 You can also create [custom hooks](https://reactjs.org/docs/hooks-custom.html)
@@ -220,6 +223,8 @@ You can also create [custom hooks](https://reactjs.org/docs/hooks-custom.html)
 - Create different types of schemes. Refer [the color api](https://www.thecolorapi.com/docs#schemes) for more types of schemes.
 - You can add some more functionality to this app, like getting the `baseColor` from the user.
 - You can also create a custom function which generates a random color, without using [randomcolor](https://randomcolor.lllllllllllllllll.com/) package.
+
+[`useCallback`](https://reactjs.org/docs/hooks-reference.html#usecallback) 
 
 Make use of your creativity, use hooks in your projects and share it with me on slack as [@Giridhar](https://hackclub.slack.com/team/U013E6KE9UJ).
 
@@ -232,6 +237,6 @@ Monochrome Color Schemes - It generates monochrome color-schemes. Same as the pr
 Analogic Color Schemes -   It generates Analogic-complement color-schemes. Same as the project in this workshop, but with different type of scheme.
 
 - Example-3: [Demo](https://random-color-scheme.giridharhackclu.repl.co). [Source code](https://repl.it/@Giridharhackclu/desired-color-scheme#src/App.js).<br>
-In this example, the [randomcolor](https://randomcolor.lllllllllllllllll.com/) package is not used. Insted created a custom function to generate random colors.
+In this example, the [randomcolor](https://randomcolor.lllllllllllllllll.com/) package is not used. Instead created a custom function to generate random colors.
 
 Use the power of React Hooks in you next React project. Hope you enjoy this workshop :v:
