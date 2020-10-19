@@ -139,7 +139,7 @@ export default function App() {
 
 The `useEffect()` API accepts a function as argument. The function runs when the component is first rendered, and on every subsequent rerender/update. React first updates the DOM, then calls any function passed to `useEffect()`. All without blocking the UI rendering even on blocking code, unlike the old `componentDidMount` and `componentDidUpdate`, which makes our apps feel faster. It is very effective adding external API class, or event-listeners inside this hook. Since the `useEffect()` functions are run on every subsequent re-render/update, we can tell React to skip a run, for performance purposes, by adding a second parameter which is an array that contains a list of state variables to watch for. React will only re-run the side effect if one of the items in this array changes. If the second parameter is not defined, the `useEffect()` runs infinitely.
 
-Now we can set the colors of our project using `useEffect()`. We get a base color from `randomColor()` and make a color scheme using an [API](https://www.thecolorapi.com/form-scheme). The following `getColors()` function creates elements in the `colors` array. We can get different color schemes using our `baseColor`from the [API](https://www.thecolorapi.com/form-scheme).
+Now we can set the colors of our project using `useEffect()`. We get a base color from `randomColor()` and make a color scheme using an [the color API](https://www.thecolorapi.com/form-scheme). The following `getColors()` function creates elements in the `colors` array. We can get different color schemes using our `baseColor`from the [the color API](https://www.thecolorapi.com/form-scheme).
 
 Make sure that you import `useEffect` from React.
 
