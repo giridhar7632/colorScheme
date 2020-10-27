@@ -110,7 +110,7 @@ export default function App() {
   const [colors, setColors] = useState([])
 
   return (
-    <div className="container">
+    <div>
         <button className="btn">Change!</button>
     </div>
   )
@@ -129,7 +129,7 @@ export default function App() {
     }
 
   return (
-    <div className="container">
+    <div>
         <button className="btn" onClick={change}>Change!</button>
     </div>
   )
@@ -194,7 +194,7 @@ export default function App() {
   useEffect(getColor, [count])
   console.log(colors)
   return (
-    <div className="container">
+    <div>
         <Color
           colors={colors}
         />
