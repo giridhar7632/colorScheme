@@ -110,6 +110,7 @@ export default function App() {
   const [colors, setColors] = useState([])
 
   return (
+    <div className="container">
         <button className="btn">Change!</button>
     </div>
   )
@@ -128,7 +129,7 @@ export default function App() {
     }
 
   return (
-    <div>
+    <div className="container">
         <button className="btn" onClick={change}>Change!</button>
     </div>
   )
@@ -166,7 +167,7 @@ Every time you click the button, `count` changes. As the `count` changes, the `u
 
 ![Visualisation](https://cloud-endlseu6b.vercel.app/0resized.png)
 
-Until now, you cannot see any colors on the screen. Let's now render the `Color.js` component inside for `App.js` component and pass the `colors` array as props.
+You cannot see any colors on the screen. Let's now render the `Color.js` component inside for `App.js` component and pass the `colors` array as props.
 
 ```javascript
 import React, { useState, useEffect } from 'react'
@@ -193,7 +194,7 @@ export default function App() {
   useEffect(getColor, [count])
   console.log(colors)
   return (
-    <div>
+    <div className="container">
         <Color
           colors={colors}
         />
@@ -203,7 +204,7 @@ export default function App() {
 }
 ```
 
-That's it!! Now you can see random color-schemes on the webpage. You can change the colors, clicking the button. The `useState()` and `useEffect` are the most used hooks in react. Check the final project [here](https://color-scheme-generator.giridharhackclu.repl.co/).
+That's it!! Now you can see random color-schemes on the webpage. You can change the colors, clicking the button. The `useState()` and `useEffect` are the most used hooks in react. Check the final code [here](https://color-scheme-generator.giridharhackclu.repl.co/).
 
 ![Final Project](https://cloud-hptr7s5bf.vercel.app/0color-schemer.gif)
 
